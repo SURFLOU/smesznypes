@@ -1,5 +1,3 @@
-# encoding=utf8 
-
 import os
 import sys
 import json
@@ -9,8 +7,6 @@ from datetime import datetime
 import requests
 from flask import Flask, request
 
-reload(sys)
-sys.setdefaultencoding('utf8')
 
 app = Flask(__name__)
 
@@ -51,7 +47,7 @@ def webhook():
                     messageA = "Jakie s\245 godziny pracy?"
                     if "text" in messaging_event["message"]:
                         message_text = messaging_event["message"]["text"]  # the message's text
-                        if message_text == unicode(messageA):
+                        if message_text == messageA.encode('utf-8').strip():
                             getRandomMessage(user_id=sender_id)
 
 
