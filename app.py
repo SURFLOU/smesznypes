@@ -23,7 +23,7 @@ def verify():
 
 def getRandomMessage(user_id):
     message = ["ciongaj zaslonke", "twoj stary zjezdza po tarce od sera", "twoj stary jest w darmowej rotacji championow w lolu", "twoj stary chowa sie za kratka w excelu recydywa", "twoj stary stoi mi pod oknem na akordenie gra"]
-    send_message(user_id, message[random.randint(0,len(message))])
+    send_message(user_id, message[random.randint(0,(len(message)-1))])
     
                   
 @app.route('/', methods=['POST'])
