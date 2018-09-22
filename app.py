@@ -1,3 +1,5 @@
+# encoding=utf8
+
 import os
 import sys
 import json
