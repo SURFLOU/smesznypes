@@ -23,6 +23,7 @@ def verify():
 
 def getRandomMessage(user_id):
     message = ["ciongaj zaslonke", "twoj stary zjezdza po tarce od sera", "twoj stary jest w darmowej rotacji championow w lolu", "twoj stary chowa sie za kratka w excelu recydywa", "twoj stary stoi mi pod oknem na akordenie gra"]
+    messageA = "Jakie s¹ godziny pracy?"
     send_message(user_id, message[random.randint(0,(len(message)-1))])
     
                   
@@ -45,7 +46,7 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     if "text" in messaging_event["message"]:
                         message_text = messaging_event["message"]["text"]  # the message's text
-                        if message_text == "jan pawlacz":
+                        if message_text == messageA:
                             getRandomMessage(user_id=sender_id)
 
 
