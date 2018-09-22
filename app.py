@@ -28,7 +28,7 @@ def getRandomMessage(user_id, user_message):
     messageB = "Gdzie si\u0119 znajduje firma?"
     messageC = "Czy s\u0105 jakie\u015B promocje?"
     messageD = "Jakie potrawy serwujecie?"
-    if(user_message == a or user_message == b or user_message == c or user_message == d)
+    if(user_message == messageA or user_message == messageB or user_message == messageC or user_message == messageD):
         send_message(user_id, message[random.randint(0,(len(message)-1))])
     
                   
