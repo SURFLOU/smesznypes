@@ -45,7 +45,7 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     if "text" in messaging_event["message"]:
                         message_text = messaging_event["message"]["text"]  # the message's text
-                        if message_text = "jan pawlacz":
+                        if message_text == "jan pawlacz":
                             getRandomMessage(user_id=sender_id)
 
 
