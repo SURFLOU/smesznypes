@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# encoding=utf8 
 
 import os
 import sys
@@ -8,6 +8,9 @@ from datetime import datetime
 
 import requests
 from flask import Flask, request
+
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 app = Flask(__name__)
 
