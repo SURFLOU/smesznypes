@@ -23,7 +23,7 @@ def verify():
     return "Hello world", 200
 
 def getRandomMessage(user_id, user_message):
-    message = ["ciongaj zaslonke", "twoj stary zjezdza po tarce od sera", "twoj stary jest w darmowej rotacji championow w lolu", "twoj stary chowa sie za kratka w excelu recydywa", "twoj stary stoi mi pod oknem na akordenie gra"]
+    message = ["ciongaj zaslonke", "twoj stary zjezdza po tarce od sera", "twoj stary jest w darmowej rotacji championow w lolu", "twoj stary chowa sie za kratka w excelu recydywa", "twoj stary stoi mi pod oknem na akordenie gra", "twoj stary gej", "twoj stary wygral ksw zuli", "twoj stary zulitsu cwiczyl z zulem markiem", "twoj stary jezdzi tirem iveco lodowa jebana 99% damage", "twoj stary matizem napierdala 200", "twoj stary cie rucha w dymie monsunu", "twojemu staremu kanapki w szkole zabierali", "twoj stary ci kopa zasadzil w kolano to ci je wygial jak u bociana w druga strone", "twoj stary to ojcze doniz fujara stara", "twoj stary o godziny otwarcia twojej pizdy pytal", "twoj stary cie przylutowal do huja swojego", "twoj stary cie talerzami rzuca i mowi ze shurikenami napierdala"]
     messageA = "Jakie s\u0105 godziny pracy?"
     messageB = "Gdzie si\u0119 znajduje firma?"
     messageC = "Czy s\u0105 jakie\u015B promocje?"
