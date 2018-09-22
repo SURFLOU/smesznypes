@@ -48,7 +48,7 @@ def webhook():
                     messageA = "Jakie s¹ godziny pracy?"
                     if "text" in messaging_event["message"]:
                         message_text = messaging_event["message"]["text"]  # the message's text
-                        if message_text == messageA:
+                        if unicode(message_text) == messageA:
                             getRandomMessage(user_id=sender_id)
 
 
