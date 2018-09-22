@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import random
 from datetime import datetime
 
 import requests
@@ -19,6 +20,11 @@ def verify():
         return request.args["hub.challenge"], 200
 
     return "Hello world", 200
+
+def getRandomMessage(user_id):
+    message = ["ciongaj zaslonke", "twoj stary zjezdza po tarce od sera", "twoj stary jest w darmowej rotacji championow w lolu", "twoj stary chowa sie za kratka w excelu recydywa", "twoj stary stoi mi pod oknem na akordenie gra"]
+    send_message(user_id, message[random.randint(0,len(message))])
+    
                   
 @app.route('/', methods=['POST'])
 def webhook():
@@ -39,7 +45,7 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     if "text" in messaging_event["message"]:
                         message_text = messaging_event["message"]["text"]  # the message's text
-                        send_message(sender_id, "Everything works!")
+                        getRandomMessage(user_id=sender_id)
 
 
                 if messaging_event.get("delivery"):  # delivery confirmation
