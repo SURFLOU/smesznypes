@@ -22,7 +22,7 @@ def verify():
 
     return "Hello world", 200
 
-def getRandomMessage(user_id,user_message):
+def getRandomMessage(user_id, user_message):
     message = ["ciongaj zaslonke", "twoj stary zjezdza po tarce od sera", "twoj stary jest w darmowej rotacji championow w lolu", "twoj stary chowa sie za kratka w excelu recydywa", "twoj stary stoi mi pod oknem na akordenie gra"]
     messageA = "Jakie s\u0105 godziny pracy?"
     messageB = "Gdzie si\u0119 znajduje firma?"
@@ -52,7 +52,7 @@ def webhook():
                     if "text" in messaging_event["message"]:
                         message_text = messaging_event["message"]["text"]  # the message's text
                         if message_text == messageA:
-                            getRandomMessage(user_id=sender_id)
+                            getRandomMessage(user_id=sender_id, user_message=message_text)
 
 
                 if messaging_event.get("delivery"):  # delivery confirmation
